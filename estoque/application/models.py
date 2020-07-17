@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class Produto(models.Model):
@@ -15,6 +16,9 @@ class Produto(models.Model):
     cadastrado = models.DateTimeField(default=timezone.now) # Só é alterado no momento do cadastro do produto
     alterado = models.DateTimeField(auto_now=True) # Salvará a data e hora em que sofrer alguma alteração
     status = models.CharField(max_length=12, choices=STATUS, default='indisponível')
+
+    def get_absolute_url(self):
+        return reverse('detalharProduto', args=[self.slug])
 
     class Meta:
         ordering = ('cadastrado',)

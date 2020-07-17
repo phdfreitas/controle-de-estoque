@@ -6,7 +6,7 @@
 
 {% block content %}
     {% for produto in object_list %}
-        <h1>{{produto.nome}}</h1>
+        <h1><a href="{{produto.get_absolute_url}}">{{produto.nome}}</a></h1>
         <p>{{produto.descricao}}</p>
     {% endfor %}
 {% endblock content %}
