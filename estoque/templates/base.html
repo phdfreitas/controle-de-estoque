@@ -3,13 +3,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block title %}  {% endblock title %}</title>
 
     <!-- CSS e Links Externos-->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 <body>
+    {% block content %}
+
+    {% endblock content %}
 
 </body>
 </html>
