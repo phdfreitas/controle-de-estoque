@@ -3,8 +3,12 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
+from django.views.generic.base import TemplateView
 from . models import Produto
 
+
+class HomeView(TemplateView):
+    template_name = 'produto/home.html'
 
 class ProdutoListView(ListView):
     model = Produto
