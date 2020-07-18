@@ -20,6 +20,9 @@ class Produto(models.Model):
     def get_absolute_url(self):
         return reverse('detalharProduto', args=[self.slug])
 
+    def get_absolute_url_update(self):
+        return reverse('atualizarProduto', args=[self.slug])
+
     class Meta:
         ordering = ('cadastrado',)
 

@@ -6,4 +6,5 @@
 
 {% block content %}
     <P>{{produto.descricao}}</P>
+    <a href="{{produto.get_absolute_url_update}}">Atualizar dados do Produto</a>
 {% endblock content %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView
 from django.views.generic.edit import CreateView
 from . models import Produto
 
@@ -17,5 +17,11 @@ class ProdutoDetailView(DetailView):
 
 class ProdutoCreateView(CreateView):
     model = Produto
-    fields = '__all__'
+    fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'usuario', 'status']
     template_name = 'produto/cadastrar-produto.html'
+
+
+class ProdutoUpdateView(UpdateView):
+    model = Produto
+    fields = ['descricao', 'quantidade', 'preco', 'status']
+    template_name = 'produto/atualizar-produto.html'
