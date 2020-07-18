@@ -1,4 +1,7 @@
 from django.db import models
+from django.dispatch import receiver
+from django.utils.text import slugify
+from django.db.models.signals import post_save
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -31,3 +34,9 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+
+@receiver(post_save, sender=Produto)
+def insert_slug(sender, instance, **kwargs):
+    if not instance.slug:
+        instance.slug = slugify(f'produto-{instance.marca}-{instance.nome}')
+        return instance.save()

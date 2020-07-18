@@ -19,7 +19,7 @@ class ProdutoDetailView(DetailView):
 
 class ProdutoCreateView(SuccessMessageMixin, CreateView):
     model = Produto
-    fields = '__all__'
+    fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'usuario', 'status']
     template_name = 'produto/cadastrar-produto.html'
     success_message = "%(field)s cadastrado com sucesso."
 
