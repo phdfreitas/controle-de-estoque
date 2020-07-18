@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
@@ -16,16 +17,30 @@ class ProdutoDetailView(DetailView):
     context_object_name = 'produto'
 
 
-class ProdutoCreateView(CreateView):
+class ProdutoCreateView(SuccessMessageMixin, CreateView):
     model = Produto
-    fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'usuario', 'status']
+    fields = '__all__'
     template_name = 'produto/cadastrar-produto.html'
+    success_message = "%(field)s cadastrado com sucesso."
+
+    def get_success_message(self, cleaned_data):
+        return self.success_message % dict(
+            cleaned_data,
+            field=self.object.nome,
+        )
 
 
-class ProdutoUpdateView(UpdateView):
+class ProdutoUpdateView(SuccessMessageMixin, UpdateView):
     model = Produto
     fields = ['descricao', 'quantidade', 'preco', 'status']
     template_name = 'produto/atualizar-produto.html'
+    success_message = "%(field)s atualizado com sucesso."
+
+    def get_success_message(self, cleaned_data):
+        return self.success_message % dict(
+            cleaned_data,
+            field=self.object.nome,
+        )
 
 
 class ProdutoDeleteView(DeleteView):

@@ -4,6 +4,14 @@
     Controle de Estoque - Lista de Produtos
 {% endblock title %}
 
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
 {% block content %}
     {% for produto in object_list %}
         <h1><a href="{{produto.get_absolute_url}}">{{produto.nome}}</a></h1>

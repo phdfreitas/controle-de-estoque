@@ -5,6 +5,15 @@
 {% endblock title %}
 
 {% block content %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     <P>{{produto.descricao}}</P>
     <a href="{{produto.get_absolute_url_update}}">Atualizar dados do Produto</a>
     <a href="{{produto.get_absolute_url_delete}}">Excluir Produto</a>
