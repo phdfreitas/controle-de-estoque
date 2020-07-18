@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, UpdateView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
 from . models import Produto
 
@@ -25,3 +26,9 @@ class ProdutoUpdateView(UpdateView):
     model = Produto
     fields = ['descricao', 'quantidade', 'preco', 'status']
     template_name = 'produto/atualizar-produto.html'
+
+
+class ProdutoDeleteView(DeleteView):
+    model = Produto
+    template_name = 'produto/excluir-produto.html'
+    success_url = reverse_lazy('listarProdutos')

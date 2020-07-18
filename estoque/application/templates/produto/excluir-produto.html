@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Controle de Estoque - Excluir Produto
+{% endblock title %}
+
+{% block content %}
+    <h1>Excluir Produto</h1>
+    <h4>Essa operação não poderá ser desfeita.</h4>
+<form method="post"> {% csrf_token %}
+        <p>Você tem certeza que deseja excluir {{produto.nome}} ?</p>
+        <input type="submit" value="Excluir">
+    </form>
+{% endblock content %}
