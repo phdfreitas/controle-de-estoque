@@ -1,3 +1,7 @@
+body{
+    background-image: url("https://images.pexels.com/photos/544917/pexels-photo-544917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
 /* Barra de Navegação */
 #pagina-inicial{
     color: aliceblue;
@@ -7,7 +11,7 @@
 }
 
 .navbar-color{
-    background-color: tomato;
+    background-color: #000000;
 }
 
 .menu-link{
@@ -17,10 +21,19 @@
     line-height: 30px;
 }
 
-/* Sobre-Home */
+/* Conteúdo Principal */
+.background-color{
+    background-color: #FFFFFF;
+}
+
+/* Sobre */
 .sobre{
-    margin-top: 25px;
     padding: 15px;
+}
+
+div.descricao{
+    position: relative;
+    z-index: 1;
 }
 
 .sobre h1{
@@ -45,4 +58,16 @@
 .sobre ul li{
     display: block;
     line-height: 1.6;
+}
+
+div.logo{
+    margin-top: -270px;
+    position: absolute;
+    z-index: 0;
+}
+
+.logo img{
+    width: 20%;
+    margin-left: 720px;
+    margin-top: 40px;
 }
