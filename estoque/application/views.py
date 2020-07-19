@@ -5,14 +5,21 @@ from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
 from . models import Produto
+from . filters import ProdutoFilterSet
 
 
 class HomeView(TemplateView):
     template_name = 'produto/home.html'
 
+
 class ProdutoListView(ListView):
     model = Produto
     template_name = 'produto/listar-produto.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = ProdutoFilterSet(self.request.GET, queryset=self.get_queryset())
+        return context
 
 
 class ProdutoDetailView(DetailView):

@@ -24,6 +24,7 @@ body{
 /* Conteúdo Principal */
 .background-color{
     background-color: #FFFFFF;
+    height: 100%;
 }
 
 /* Sobre */
@@ -34,11 +35,13 @@ body{
 div.descricao{
     position: relative;
     z-index: 1;
+    margin-bottom: 50px;
+    width: 100%;
 }
 
 .sobre h1{
     font-family: 'Mulish', sans-serif;
-    text-align: justify;
+    text-align: center;
     margin-left: 25px;
     font-size: 60px;
 }
@@ -47,6 +50,7 @@ div.descricao{
     margin-left: 25px;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
+    text-align: center;
 }
 
 .sobre ul{
@@ -70,4 +74,43 @@ div.logo{
     width: 20%;
     margin-left: 720px;
     margin-top: 40px;
+}
+
+/* Lista */
+div.titulo-lista{
+    margin-top: 12px;
+    width: 100%;
+}
+
+.titulo-lista h2{
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 40px;
+}
+
+.filtro-lista{
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.filtro-lista h4{
+    text-align: center;
+}
+
+.filtro-lista form{
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+
+/* Rodapé */
+footer{
+    background-color: #000000;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
 }
