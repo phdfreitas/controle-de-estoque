@@ -11,11 +11,12 @@ Desenvolver um sistema que facilite a verificação dos produtos em estoque de u
 </p>
 
 ## Funcionalidades do Sistema
-- [ ] Cadastrar Produtos
-- [X] Listar Produtos
-- [X] Detalhes dos Produtos Cadastrados
-- [ ] Atualizar dados dos Produtos
-- [ ] Excluir Produtos
+- [x] Cadastrar Produtos
+- [x] Listar Produtos
+- [x] Detalhes dos Produtos Cadastrados
+- [x] Atualizar dados dos Produtos
+- [x] Excluir Produtos
+- [x] Filtro para pesquisar produtos
 - [ ] Cadastrar novos funcionários
 - [ ] Nível de Acesso
 - [ ] Layout Responsivo
