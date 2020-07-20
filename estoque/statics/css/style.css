@@ -24,7 +24,6 @@ body{
 /* Conteúdo Principal */
 .background-color{
     background-color: #FFFFFF;
-    height: 100%;
 }
 
 /* Sobre */
@@ -33,8 +32,6 @@ body{
 }
 
 div.descricao{
-    position: relative;
-    z-index: 1;
     margin-bottom: 50px;
     width: 100%;
 }
@@ -64,25 +61,13 @@ div.descricao{
     line-height: 1.6;
 }
 
-div.logo{
-    margin-top: -270px;
-    position: absolute;
-    z-index: 0;
-}
-
-.logo img{
-    width: 20%;
-    margin-left: 720px;
-    margin-top: 40px;
-}
-
-/* Lista */
-div.titulo-lista{
+/* Geral */
+div.titulo{
     margin-top: 12px;
     width: 100%;
 }
 
-.titulo-lista h2{
+.titulo h2{
     text-align: center;
     font-family: 'Mulish', sans-serif;
     font-size: 40px;
@@ -103,7 +88,44 @@ div.titulo-lista{
     margin: 0 auto;
 }
 
+.formulario{
+    margin: 0 auto;
+}
 
+.formulario li{
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+.dados-form select{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    text-align-last: center;
+}
+
+.formulario input,
+.formulario textarea{
+    width: 75%;
+    margin: 0 auto;
+}
+
+textarea{
+    resize: none;
+}
+
+.formulario label{
+    width: 100%;
+}
+
+.formulario .dados-form{
+    text-align: center;
+}
+
+.formulario .button{
+    margin-bottom: 45px;
+    text-align: center;
+}
 
 /* Rodapé */
 footer{

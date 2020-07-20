@@ -15,9 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
-    <!-- Javascript -->
-    <script src="{% static 'js/script.js' %}"></script>
-
     <title>{% block title %}  {% endblock title %}</title>
 </head>
 <body>
@@ -49,9 +46,12 @@
         {% endblock content %}
     </div>
 
-    <footer class="fixed-bottom">
+    <footer>
         <span>Todos os direitos reservados &copy;</span>
     </footer>
+
+    <!-- Javascript -->
+    <script src="{% static 'js/script.js' %}"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
