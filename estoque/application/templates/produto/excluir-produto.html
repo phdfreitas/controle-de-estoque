@@ -5,10 +5,24 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Excluir Produto</h1>
-    <h4>Essa operação não poderá ser desfeita.</h4>
-<form method="post"> {% csrf_token %}
-        <p>Você tem certeza que deseja excluir {{produto.nome}} ?</p>
-        <input type="submit" value="Excluir">
-    </form>
+    <div class="row background-color content">
+        <div class="titulo">
+            <h2>Excluir Produto</h2>
+        </div>
+        <div class="avisos">
+            <h3>
+                Essa operação não poderá ser desfeita!
+            </h3>
+            <h4>
+                Você tem certeza que deseja excluir {{produto.nome}}?
+            </h4>
+        </div>
+        <div class="formulario">
+            <form method="post"> {% csrf_token %}
+                <div class="button">
+                    <button id="botao-excluir" type="submit" class="btn btn-danger">Excluir {{produto.nome}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock content %}

@@ -5,9 +5,20 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Atualizar Produto</h1>
-    <form method="post"> {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Atualizar">
-    </form>
+    <div class="row background-color">
+        <div class="titulo">
+            <h2>Atualizar Produto</h2>
+        </div>
+        <div class="formulario">
+            <form method="post"> {% csrf_token %}
+                <div class="dados-form form-group">
+                    {{form.as_ul}}
+                </div>
+
+                <div class="button">
+                    <button type="submit" class="btn btn-success">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock content %}

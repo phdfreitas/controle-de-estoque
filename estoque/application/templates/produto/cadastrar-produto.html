@@ -10,7 +10,7 @@
             <h2>Novo Produto</h2>
         </div>
         <div class="formulario">
-            <form method="post" id="form-cadastro-produto"> {% csrf_token %}
+            <form method="post"> {% csrf_token %}
                 <div class="dados-form form-group">
                     {{form.as_ul}}
                 </div>

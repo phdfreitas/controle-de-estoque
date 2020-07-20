@@ -24,6 +24,7 @@
 /* Conteúdo Principal */
 .background-color{
     background-color: #FFFFFF;
+    margin-bottom: 45px;
 }
 
 /* Sobre */
@@ -166,10 +167,25 @@ div#detalhe-produto textarea{
     padding: 12px;
 }
 
+.avisos {
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+}
 
+.avisos h3,
+.avisos h4{
+    text-align: center;
+    margin-bottom: 12px;
+}
 
+.avisos h3{
+    font-size: 36px;
+    color: red;
+}
 
-
+#botao-excluir{
+    margin-top: 16px;
+}
 
 /* Rodapé */
 footer{
