@@ -1,6 +1,6 @@
-body{
+/*body{
     background-image: url("https://images.pexels.com/photos/544917/pexels-photo-544917.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
+}*/
 
 /* Barra de Navegação */
 #pagina-inicial{
@@ -126,6 +126,50 @@ textarea{
     margin-bottom: 45px;
     text-align: center;
 }
+
+/* Detalhes Produto */
+div#detalhe-produto{
+    width: 90%;
+    margin: 0 auto;
+}
+
+div#detalhe-produto h2{
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div#detalhe-produto label{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+div#detalhe-produto textarea{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.detalhe-links{
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 21px;
+}
+
+.detalhe-links a{
+    font-size: 18px;
+    padding: 12px;
+}
+
+
+
+
+
 
 /* Rodapé */
 footer{

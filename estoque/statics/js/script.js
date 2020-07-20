@@ -11,8 +11,16 @@ function addBootstrapClass() {
     ]
 
     for(let i = 0; i < campos.length; i++){
-        if (campos[i].classList) campos[i].classList.add('form-control')
-        else campos[i].className += 'form-control'
+        if(campos[i] !== null) {
+            if (campos[i].classList) campos[i].classList.add('form-control')
+            else campos[i].className += 'form-control'
+        }
     }
 }
 addBootstrapClass()
+
+function removendoEspacosEmBranco() {
+    let text = document.getElementById("detalhe-produto-descricao")
+    text.value = text.value.trim()
+}
+removendoEspacosEmBranco()

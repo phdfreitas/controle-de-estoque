@@ -6,15 +6,39 @@
 
 {% block content %}
 
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+    <div class="row background-color">
+        <div class="mensagens">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
 
-    <P>{{produto.descricao}}</P>
-    <a href="{{produto.get_absolute_url_update}}">Atualizar dados do Produto</a>
-    <a href="{{produto.get_absolute_url_delete}}">Excluir Produto</a>
+        <div id="detalhe-produto">
+            <h2>
+                {{produto.nome}}
+            </h2>
+            <label for="detalhe-produto-descricao">Descrição do Produto</label>
+            <textarea id="detalhe-produto-descricao" class="form-control"
+                      cols="50" rows="12" readonly>
+                {{produto.descricao}}
+            </textarea>
+        </div>
+
+        <div class="detalhe-links">
+
+            <a href="{{produto.get_absolute_url_update}}"
+                class="badge badge-primary">
+                Atualizar dados do Produto
+            </a>
+
+            <a href="{{produto.get_absolute_url_delete}}"
+                class="badge badge-danger">
+                Excluir Produto
+            </a>
+        </div>
+    </div>
 {% endblock content %}
