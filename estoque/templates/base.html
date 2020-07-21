@@ -28,10 +28,10 @@
 
             <div id="nav-target" class="collapse navbar-collapse">
                 {% if user.is_authenticated %}
-                    <span style="color: white;">Bem-vindo, {{user.first_name}}</span>
-                    <span style="color: white;"> <a href="{% url 'logout' %}">Sair</a> </span>
-                {% endif %}
-                <ul class="navbar-nav ml-auto">
+                    <div  class="bem-vindo">
+                        <h6>Bem-vindo, {{user.first_name}}</h6>
+                    </div>
+                    <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a href="{% url 'cadastrarProduto' %}" class="menu-link">Cadastrar Produto</a>
                     </li>
@@ -39,7 +39,22 @@
                     <li class="nav-item">
                         <a href="{% url 'listarProdutos' %}" class="menu-link">Listar Produto</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="menu-link">Sair</a>
+                    </li>
                 </ul>
+                {% else %}
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="{% url 'cadastrarUsuario' %}" class="menu-link">Cadastrar-se</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="menu-link">Entrar</a>
+                    </li>
+                </ul>
+                {% endif %}
             </div>
         </nav>
     </header>

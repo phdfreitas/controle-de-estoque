@@ -17,6 +17,36 @@
     line-height: 30px;
 }
 
+/* =-=-=-= Cadastro de Usuário e Login =-=-=-= */
+.bem-vindo{
+    width: 40%;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.bem-vindo h6{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.helptext{
+    display: none;
+}
+
+div.cadastro-usuario ul.errorlist{
+    width: 95%;
+
+}
+
+div.cadastro-usuario ul.errorlist li{
+    margin: auto;
+    width: 100%;
+    color: red;
+}
+
+/* =-=-=-= Fim Cadastro de Usuário e Login =-=-=-= */
+
 /* Conteúdo Principal */
 .background-color{
     background-color: #FFFFFF;
@@ -104,6 +134,14 @@ div.titulo{
 .formulario textarea{
     width: 75%;
     margin: 0 auto;
+}
+
+.novo-usuario input{ /* Tela de Login */
+    width: 100%;
+}
+
+.cadastro-usuario input{ /* Tela de Cadastro */
+    width: 100%;
 }
 
 textarea{
