@@ -30,7 +30,7 @@ class ProdutoDetailView(DetailView):
 
 class ProdutoCreateView(SuccessMessageMixin, CreateView):
     model = Produto
-    fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'usuario', 'status']
+    fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'status']
     template_name = 'produto/cadastrar-produto.html'
     success_message = "%(field)s cadastrado com sucesso."
 
@@ -39,6 +39,12 @@ class ProdutoCreateView(SuccessMessageMixin, CreateView):
             cleaned_data,
             field=self.object.nome,
         )
+
+    def form_valid(self, form):
+        form.instance.usuario = self.request.user
+        url = super().form_valid(form)
+
+        return url
 
 
 class ProdutoUpdateView(SuccessMessageMixin, UpdateView):

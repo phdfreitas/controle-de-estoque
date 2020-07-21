@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Controle de Estoque - Lista de Produtos
+    Estoque Django Brasil - Lista de Produtos
 {% endblock title %}
 
     {% if messages %}
@@ -46,7 +46,7 @@
                         <td>{{produto.marca}}</td>
                         <td>{{produto.quantidade}}</td>
                         <td>{{produto.preco}}</td>
-                        <td>{{produto.usuario}}</td>
+                        <td>{{produto.usuario.get_full_name}}</td>
                         <td>{{produto.status}}</td>
                         <td><a href="{{produto.get_absolute_url}}">Ver mais</a></td>
                     </tr>
