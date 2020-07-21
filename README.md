@@ -1,14 +1,14 @@
-<h1 align="center">Controle de Estoque</h1>
+<h1 align="center">Estoque Django Brasil</h1>
+
+<p align="center">
+	<img src="estoque/statics/imagens/home1.png">
+</p>
 
 > Status do Projeto: Em Desenvolvimento :warning:
 
-## Sobre o Projeto
-Desenvolver um sistema que facilite a verificação dos produtos em estoque de uma loja, mercado e afins.
+## O Projeto
+Um sistema que facilita a verificação dos produtos em estoque de uma loja, mercado, microempreendedor individual e afins.
 
-<p align="center">
-	<img src="estoque/media/readme/exemplo.png">
-	<span>A imagem acima ainda não condiz com o resultado final do projeto.</span>
-</p>
 
 ## Funcionalidades do Sistema
 - [x] Cadastrar Produtos
@@ -18,9 +18,9 @@ Desenvolver um sistema que facilite a verificação dos produtos em estoque de u
 - [x] Excluir Produtos
 - [x] Filtro para pesquisar produtos
 - [ ] Cadastrar novos funcionários
-- [ ] Nível de Acesso
-- [ ] Layout Responsivo
-- [ ] Interface Intuitiva
+- [x] Nível de Acesso
+- [x] Layout Responsivo
+- [x] Interface Intuitiva
 
 ## Como acessar
 > Ainda não disponível.
