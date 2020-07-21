@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Controle de Estoque - Cadastro
+{% endblock title %}
+
+{% block content %}
+    <div class="row background-color">
+        <h2>Abra sua conta</h2>
+        <form method="post">{% csrf_token %}
+            <div class="dados-form form-group">
+                {{form.as_ul}}
+            </div>
+
+            <div class="button">
+                <button type="submit" class="btn btn-success">Cadastre-se</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+

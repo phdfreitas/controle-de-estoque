@@ -28,7 +28,7 @@
 
             <div id="nav-target" class="collapse navbar-collapse">
                 {% if user.is_authenticated %}
-                    <span style="color: white;">Bem-vindo, {{user.username}}</span>
+                    <span style="color: white;">Bem-vindo, {{user.first_name}}</span>
                     <span style="color: white;"> <a href="{% url 'logout' %}">Sair</a> </span>
                 {% endif %}
                 <ul class="navbar-nav ml-auto">
