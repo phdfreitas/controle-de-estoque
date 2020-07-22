@@ -4,6 +4,9 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from django.views.generic.edit import CreateView
 from django.views.generic.base import TemplateView
+
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 from . models import Produto
 from . filters import ProdutoFilterSet
 
@@ -12,7 +15,9 @@ class HomeView(TemplateView):
     template_name = 'produto/home.html'
 
 
-class ProdutoListView(ListView):
+class ProdutoListView(LoginRequiredMixin, ListView):
+    login_url = reverse_lazy('login')
+
     model = Produto
     template_name = 'produto/listar-produto.html'
 
@@ -22,13 +27,17 @@ class ProdutoListView(ListView):
         return context
 
 
-class ProdutoDetailView(DetailView):
+class ProdutoDetailView(LoginRequiredMixin, DetailView):
+    login_url = reverse_lazy('login')
+
     model = Produto
     template_name = 'produto/detalhar-produto.html'
     context_object_name = 'produto'
 
 
-class ProdutoCreateView(SuccessMessageMixin, CreateView):
+class ProdutoCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url = reverse_lazy('login')
+
     model = Produto
     fields = ['nome', 'marca', 'descricao', 'quantidade', 'preco', 'status']
     template_name = 'produto/cadastrar-produto.html'
@@ -47,7 +56,9 @@ class ProdutoCreateView(SuccessMessageMixin, CreateView):
         return url
 
 
-class ProdutoUpdateView(SuccessMessageMixin, UpdateView):
+class ProdutoUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = reverse_lazy('login')
+
     model = Produto
     fields = ['descricao', 'quantidade', 'preco', 'status']
     template_name = 'produto/atualizar-produto.html'
@@ -60,7 +71,9 @@ class ProdutoUpdateView(SuccessMessageMixin, UpdateView):
         )
 
 
-class ProdutoDeleteView(DeleteView):
+class ProdutoDeleteView(LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('login')
+
     model = Produto
     template_name = 'produto/excluir-produto.html'
     success_url = reverse_lazy('listarProdutos')
