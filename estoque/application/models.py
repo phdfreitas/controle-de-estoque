@@ -14,7 +14,7 @@ class Produto(models.Model):
     slug = models.SlugField(max_length=100)
     descricao = models.TextField()
     quantidade = models.IntegerField()
-    preco = models.CharField(max_length=6)
+    preco = models.CharField(max_length=10)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE) # Mostrará o usuário que fez o cadastro do produto
     cadastrado = models.DateTimeField(default=timezone.now) # Só é alterado no momento do cadastro do produto
     alterado = models.DateTimeField(auto_now=True) # Salvará a data e hora em que sofrer alguma alteração
