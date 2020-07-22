@@ -10,21 +10,20 @@
 Um sistema que facilita a verificação dos produtos em estoque de uma loja, mercado, microempreendedor individual e afins.
 
 
-## Funcionalidades do Sistema
-- [x] Cadastrar Produtos
-- [x] Listar Produtos
-- [x] Detalhes dos Produtos Cadastrados
-- [x] Atualizar dados dos Produtos
-- [x] Excluir Produtos
+## Funcionalidades da aplicação
+- [x] Cadastro de produtos
+- [x] Lista todos os produtos independente do usuário que o cadastrou
+- [x] Detalhes dos produtos cadastrados
 - [x] Filtro para pesquisar produtos
-- [ ] Cadastrar novos funcionários
-- [x] Nível de Acesso
+- [x] Acesso apenas com autenticação
+- [ ] Nível de Acesso
 - [x] Layout Responsivo
 - [x] Interface Intuitiva
 
 ## Como acessar
 > Ainda não disponível.
 
-### Pré-requesitos
-- :exclamation: Python 3.6+
-- :exclamation: Django 3.0.x
+### Pré-requesitos 
+
+:exclamation: Python 3.6+
+:exclamation: Django 3.0.x
