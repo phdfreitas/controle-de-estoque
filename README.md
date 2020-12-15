@@ -9,13 +9,13 @@
 	<img src="https://img.shields.io/static/v1?label=Python&message=Language&color=blue&style=for-the-badge&logo=Python">
 </p>
 
-> Status do Projeto: Em Desenvolvimento :warning:
+> Status do Projeto: Concluído :heavy_check_mark:
 
-## :large_blue_diamond: O Projeto 
-Um sistema que facilita a verificação dos produtos em estoque de uma loja, mercado, microempreendedor individual e afins.
+## O Projeto 
+A ideia consiste em um sistema que facilite a verificação dos produtos em estoque de uma loja, mercado e afins.
 
 
-## :large_blue_diamond: Funcionalidades da aplicação 
+## Funcionalidades da aplicação 
 
 :heavy_check_mark: Cadastro de produtos
 
@@ -36,11 +36,7 @@ Um sistema que facilita a verificação dos produtos em estoque de uma loja, mer
 	<span>Lista de todos os produtos. Mostrando o usuário que o cadastou. Além do filtro para pesquisa.</span>
 </p>
 
-
-## :large_blue_diamond: Como acessar
-> Ainda não disponível.
-
-### :large_blue_diamond: Pré-requesitos 
+### Pré-requesitos 
 
 :exclamation: Python 3.6+
 
@@ -48,7 +44,7 @@ Um sistema que facilita a verificação dos produtos em estoque de uma loja, mer
 
 :exclamation: Django 3.0.x
 
-### :large_blue_diamond: Para rodar a aplicação no seu dispositivo
+### Para executar a aplicação no seu dispositivo
 
 - **Se você já possui os pré-requisitos instalados:**
 
