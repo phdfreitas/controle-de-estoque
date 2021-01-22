@@ -36,7 +36,7 @@ A ideia consiste em um sistema que facilite a verificação dos produtos em esto
 	<span>Lista de todos os produtos. Mostrando o usuário que o cadastou. Além do filtro para pesquisa.</span>
 </p>
 
-### Pré-requesitos 
+### Pré-requisitos 
 
 :exclamation: Python 3.6+
 
@@ -62,5 +62,3 @@ A ideia consiste em um sistema que facilite a verificação dos produtos em esto
 
 	- No browser de sua preferência acesse
 	> **_localhost:8000/_**
-
-	**Teste, altere, divirta-se**
